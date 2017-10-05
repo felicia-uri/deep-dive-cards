@@ -1,8 +1,8 @@
 package edu.cnm.deepdive.cards;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -33,8 +33,10 @@ public class Deck {
     Collections.shuffle(cards);
   }
   public void sort() {
-    //sort(0, cards.size());
-    Collections.sort(cards);
+    Collections.sort(cards);}
+
+  public void sort(Comparator<Card> comp){
+    Collections.sort(cards, comp);
 
   }
 
